@@ -1,29 +1,3 @@
-<?php
-require_once 'vendor/autoload.php';
-require_once "./random_string.php";
-
-use MicrosoftAzure\Storage\Blob\BlobRestProxy;
-use MicrosoftAzure\Storage\Common\Exceptions\ServiceException;
-use MicrosoftAzure\Storage\Blob\Models\ListBlobsOptions;
-use MicrosoftAzure\Storage\Blob\Models\CreateContainerOptions;
-use MicrosoftAzure\Storage\Blob\Models\PublicAccessType;
-
-$connectionString = "DefaultEndpointsProtocol=https;AccountName=dicodingvision;AccountKey=DefaultEndpointsProtocol=https;AccountName=dicodingvision;AccountKey=X2JqQ05HbIjaOv0Vl8YnS6HOXSeGPJ43jq70ohs6jgsueQCJD+ZWPu4lm7N9/blWoMg8nJj0uiRlfSUxlkrbmg==;EndpointSuffix=core.windows.net;EndpointSuffix=core.windows.net";
-$containerName = "dicodingvisioncontainer";
-// Create blob client.
-$blobClient = BlobRestProxy::createBlobService($connectionString);
-if (isset($_POST['submit'])) {
-	$fileToUpload = strtolower($_FILES["fileToUpload"]["name"]);
-	$content = fopen($_FILES["fileToUpload"]["tmp_name"], "r");
-	// echo fread($content, filesize($fileToUpload));
-	$blobClient->createBlockBlob($containerName, $fileToUpload, $content);
-	header("Location: analyze.php");
-}
-$listBlobsOptions = new ListBlobsOptions();
-$listBlobsOptions->setPrefix("");
-$result = $blobClient->listBlobs($containerName, $listBlobsOptions);
-?>
-
 
 
 
