@@ -6,7 +6,7 @@ use MicrosoftAzure\Storage\Common\Exceptions\ServiceException;
 use MicrosoftAzure\Storage\Blob\Models\ListBlobsOptions;
 use MicrosoftAzure\Storage\Blob\Models\CreateContainerOptions;
 use MicrosoftAzure\Storage\Blob\Models\PublicAccessType;
-$connectionString = "DefaultEndpointsProtocol=https;AccountName=blobvisionnabil;AccountKey=WOvEqzxP3D02j7FIyt31WHsErdneaq7vlFyMQe0JcRxL6EP/aM5JEr1MOJTj0Fu2Gt0p1Ljz+3YyH0CKmOD4KQ==;EndpointSuffix=core.windows.net";
+$connectionString = "DefaultEndpointsProtocol=https;AccountName=dicodingwebappnabil;AccountKey=Mrx6ph2+5QaBO/7AeJRRsotT2xwqoJ85Gllyhe4nfHA1ytmppqbDrCJcBVko+eQcJIXsYEwkTrDS3WEeQBdHFg==;EndpointSuffix=core.windows.net";
 $containerName = "containernabil";
 // Create blob client.
 $blobClient = BlobRestProxy::createBlobService($connectionString);
