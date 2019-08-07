@@ -1,7 +1,7 @@
 <?php
 if (isset($_POST['submit'])) {
 	if (isset($_POST['url'])) {
-        $url = $_POST['url'];
+		$url = $_POST['url'];
 	} else {
 		header("Location: analyze.php");
 	}
@@ -17,7 +17,7 @@ if (isset($_POST['submit'])) {
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
             <meta name="description" content="">
             <meta name="author" content="">
-            <link rel="icon" href="#">
+            <link rel="icon" href="https://raw.githubusercontent.com/muhrizky/Smart-Parkir/master/parking_meter__2__Mrq_icon.ico">
 
             <title>Azure Computer Vision</title>
 
@@ -30,29 +30,6 @@ if (isset($_POST['submit'])) {
             <link href="starter-template.css" rel="stylesheet">
 
             <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-
-            <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Maven+Pro|Righteous" rel="stylesheet">
-
-    <style>
-    
-        .navbar {
-            background-image: linear-gradient(to right, #999900, #FFFFCC);
-        }
-
-        .nav-link {
-            color : blue;
-        }
-
-        h1 {
-            font-family: 'Fredoka One', cursive;
-        }
-
-        .lead {
-            font-family: 'Maven Pro', sans-serif;
-        }
-
-    </style>
     </head>
         <body>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
@@ -65,14 +42,14 @@ if (isset($_POST['submit'])) {
 				<a class="nav-link" href="https://webappsubmission1.azurewebsites.net/">Home</a>
 			</li>
 			<li class="nav-item active">
-				<a class="nav-link" href="https://webappsubmission2.azurewebsites.net/analyze.php">Analisis Pribadi<span class="sr-only">(current)</span></a>
+				<a class="nav-link" href="https://webappsubmission2.azurewebsites.net/analyze.php">Analisis Gambar<span class="sr-only">(current)</span></a>
 			</li>
 		</div>
 		</nav>
 		<main role="main" class="container">
     		<div class="starter-template"> <br><br><br>
-        		<h1>Hasil Analisis Pribadi</h1>
-				<p class="lead">Berikut merupakan hasil analisis pribadi yang <b>Anda</b> Upload <br> Karakteristik Foto anda ada pada kolom Response.</p>
+        		<h1>Hasil Analisis Kendaraan</h1>
+				<p class="lead">Berikut merupakan hasil analisis dari Gambar yang telah <b>Anda</b> Upload <br> Karakteristik dan deskripsi dari Gambar anda terdapat pada kolom Response.</p>
 				<span class="border-top my-3"></span>
 			</div>
         <script type="text/javascript">
@@ -91,9 +68,9 @@ if (isset($_POST['submit'])) {
             // If you use a free trial subscription key, you shouldn't need to change
             // this region.
             var uriBase =
-"https://southeastasia.api.cognitive.microsoft.com/vision/v2.0/analyze";
+            "https://southeastasia.api.cognitive.microsoft.com/vision/v2.0/analyze";
             // Request parameters.
-             var params = {
+            var params = {
                 "visualFeatures": "Categories,Description,Color",
                 "details": "",
                 "language": "en",
