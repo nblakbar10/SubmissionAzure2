@@ -160,7 +160,7 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
                 <a class="nav-link" href="https://webappsubmission1.azurewebsites.net/">Home</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="https://webappsubmission2.azurewebsites.net/">Analisis<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="https://webappsubmission1.azurewebsites.net/analyze.php">Analisis<span class="sr-only">(current)</span></a>
             </li>
         </div>
         </nav>
